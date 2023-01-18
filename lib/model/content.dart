@@ -12,3 +12,7 @@ class Content {
       required this.ratingPeople,
       required this.distanceTo});
 }
+
+late String geoCity;
+bool isCitySelected = false;
+bool isCityFounded = false;

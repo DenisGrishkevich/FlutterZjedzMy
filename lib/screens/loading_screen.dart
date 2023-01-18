@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'main_screen.dart';
+import 'package:zjedz/services/location.dart';
 
 class LoadingScreen extends StatefulWidget {
   static const String id = 'loading_screen';
@@ -17,7 +18,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    Location location = Location();
+    location.getCurrentLocation();
+
     ChangeContainer();
   }
 

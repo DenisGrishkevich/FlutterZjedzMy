@@ -23,6 +23,36 @@ class ContentData extends ChangeNotifier {
         ratingPeople: '648',
         distanceTo: '1.29'),
   ];
+  String _selectedCity = 'Warszawa';
+  String _selectedDate = '2023-01-10';
+  String _selectedPerson = '2 os.';
+
+  String get city {
+    return _selectedCity;
+  }
+
+  String get date {
+    return _selectedDate;
+  }
+
+  String get person {
+    return _selectedPerson;
+  }
+
+  void updateCity(String newCity) {
+    _selectedCity = newCity;
+    notifyListeners();
+  }
+
+  void updateDate(DateTime newDate) {
+    _selectedDate = newDate.toString().substring(0, 10);
+    notifyListeners();
+  }
+
+  void updatePerson(String newPerson) {
+    _selectedPerson = newPerson;
+    notifyListeners();
+  }
 
   int get contentCount {
     return _contents.length;

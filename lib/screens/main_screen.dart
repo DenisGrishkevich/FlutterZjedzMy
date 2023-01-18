@@ -14,6 +14,11 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFECC00),
@@ -40,6 +45,7 @@ class _MainScreenState extends State<MainScreen> {
                       color: Colors.black54,
                       width: 1000.0,
                       height: 300.0,
+                      child: Text(''),
                     ),
                     SizedBox(
                       height: 20.0,
